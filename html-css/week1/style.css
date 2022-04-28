@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    
+}
+
+html { 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    line-height: 1.5;
+
+}
+
+body { 
+    padding: 1rem;
+    background: rgb(153, 146, 146) ;
+
+
+}
+
+h1 { 
+    text-transform: uppercase;
+    font-size: 2rem;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightsalmon;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    
+
+} 
+
+h3 { 
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: lightsalmon;
+  
+    
+}
+
+p {
+    line-height: 1.5;
+    
+}
+
+.location {
+
+    font-size: 0.8rem;
+    
+}
+
+section + section { 
+
+margin-top: 2rem;
+}
+
+li +li {
+    margin-top: 0.5rem;
+}
+
+a { 
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.profile {
+
+    text-align: center;
+}
+
+.profile img { 
+
+    border-radius: 9999px;
+    width: 15rem;
+    height: 15rem;
+
+}
+
+.profile em {
+    margin-bottom: 1rem;
+    color: lightsalmon ;
+    font-size: 1.25rem;
+
+
+}
+
+.contact ul {
+
+    margin-top: auto;
+    text-align: center;
+}
+
+.contact li {
+ 
+    text-transform: uppercase;
+    color: lightsalmon;
+    display: inline-block;
+    line-height: 2rem;
+    padding: 0 3rem;
+
+    
+    
+}
+
+
+.about {
+    font-size: 1.15rem;
+    border-bottom: 1px solid lightsalmon;
+    border-top: 1px solid lightsalmon;
+    padding: 1rem 0; 
+    text-align: justify;
+
+}
+
+.timeline .event + .event {
+    padding-top: 1rem;
+}
+
+.timeline .event {
+    display: grid;
+    grid-template-columns: 5ch 1fr;
+}
+
+.timeline .content {
+    border-left: 1px solid #888;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+
+
+
+.cv {
+    display: grid;
+    grid-gap: 4rem;
+    background-color: white;
+    padding: 3rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
