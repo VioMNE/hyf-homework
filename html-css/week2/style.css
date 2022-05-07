@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+ 
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+
+  header {  
+    text-align: left;
+    height: auto; 
+    display: flex; 
+    flex-direction: column;
+    
+  }
+
+  .topcontent {
+      background-color: rgb(234, 232, 232) ;
+  }
+  
+  header h1 {
+    margin: 0.5em 1.5em;
+  }
+  
+  span {
+    margin: 0em 3rem 1em 3em;
+    color: gray;
+  }
+  
+  .office {
+
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+    padding: 0.5rem; 
+  }
+  
+  nav a {
+    text-align: left;
+    text-decoration: none;
+    font-size: 15px;
+    color: black; 
+  }
+  
+  nav a:hover {
+    cursor: pointer;
+    color: grey;
+  }
+  
+
+  .contener {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    margin: 1em 3em; 
+    gap: 3em;
+  }
+  
+ h1,h2,h3,h4,h5{
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  li {
+      list-style: none;
+  }
+   
+  .logotypes {
+    order: 4;
+}
+
+.logo-list { 
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: repeat (4, 1fr);   
+  
+  }
+    
+  footer {
+    display:flex;
+    justify-content: space-between;
+    background-color: #6736CE;
+    color: white;
+    font-size: 1em;
+    line-height: 15px;
+    margin-top: 1em; 
+    padding: 0 3em;
+  }
+  
+  .map-responsive {
+    overflow:hidden;
+    position:relative;
+    height: 200px;
+    width: 200px;
+}
+  
+  @media only screen and (max-width: 600px) {
+    .grid-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    header{
+      text-align: center;
+      font-size: 15px ;
+    }
+  
+    nav{
+      flex-direction: column;
+      text-align: center;
+    }
+    nav a {
+      text-align: center;
+    }
+  
+    .contener {
+      grid-template-columns: 1fr;
+      gap: 0px;
+      text-align: left;
+    }
+  
+    footer {
+      flex-direction: column;
+    }
+
+  }
