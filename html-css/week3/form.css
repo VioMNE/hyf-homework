@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #222;
+  
+  
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin: 30px;
+}
+nav a {
+font-size: 18px;
+color: black;
+text-decoration: none;
+}
+
+nav a:hover {
+  color: lightgray;
+}
+
+.progresbar {
+
+  font-size: 20px;
+  text-align: left;
+}
+
+progress {
+  display: flex; 
+  width: 50%;
+}
+
+
+section {
+  width: 60%;
+  padding: 30px 50px;
+  margin: 70px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px ;
+  border: solid #222 ;
+  width: 70%;
+  margin-left: 100px;
+}
+
+
+label {
+  width: 130px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.personalinfo, .addressinfo, .mailandphone {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+select {
+  width: 11%;
+}
+
+.profilesection {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-top: 30px;
+  width:auto;
+}
+
+
+textarea {
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  width: 500px;
+  height: 150px;
+  margin-top: 25px;
+}
+
+.proftext {
+  width: 70%;
+}
+
+input[type=checkbox]{
+  height:20px;
+  width: 30px;
+}
+
+input[type=radio] {
+  height: 20px;
+  width: 15px;
+margin-right: 50px;
+  border: 2px solid lightgrey;
+}
+
+
+.intreste {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap:10px;
+  justify-content: space-around;
+}
+
+.style {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap:10px;
+  justify-content: space-around;
+  margin-right: 20%;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+em {
+  font-size: 15px;
+}
+
+
+.nextbutton {
+  text-align: right;
+  width: 90%;
+  margin: 40px ;
+}
+
+.next {
+ text-decoration: none;
+font-size: 30px;
+color: black;
+border: solid #222;
+padding: 10px 30px ;
+}
+
+@media only screen and (max-width: 667px) {
+  header { 
+    flex-direction: column;
+    align-items: center;
+
+  }  
+
+  h1 {
+    font-size: 20px;
+  }
+   nav{
+     flex-direction: column;
+     text-align: center;
+   }
+   nav a {
+     text-align: center;
+   }
+
+   .personalinfo, .addressinfo, .mailandphone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profilesection {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    
+  }
+
+   .intreste {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column:inherit
+    align-items: center;
+    
+  }
+
+  .style {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: auto;
+    align-items: center;
+  }
+      
+  textarea {
+   width:300px;
+      }
+}
