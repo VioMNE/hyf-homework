@@ -1,3 +1,5 @@
 git ex number 2 git
 
 adding some more text in to file
+
+i need to fix this text 
