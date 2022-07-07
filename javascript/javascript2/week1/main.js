@@ -9,15 +9,15 @@ function renderProducts(products) {
     for(let product of products) {
         const liList = document.createElement("li");
         ulList.appendChild(liList);
-        const h2Tag = document.createElement("h2");
-        h2Tag.innerHTML = product.name;
-        liList.appendChild(h2Tag);
-        const divTag = document.createElement("div");
-        divTag.innerHTML = `price: ${product.price}`;
-        liList.appendChild(divTag);
-        const divTag2 = document.createElement("div");
-        divTag2.innerHTML = `Rating: ${product.rating}`;
-        liList.appendChild(divTag2);
+        const h2product = document.createElement("h2");
+        h2product.innerHTML = product.name;
+        liList.appendChild(h2product);
+        const divPrice = document.createElement("div");
+        divPrice.innerHTML = `price: ${product.price}`;
+        liList.appendChild(divPrice);
+        const divRating = document.createElement("div");
+        divRating.innerHTML = `Rating: ${product.rating}`;
+        liList.appendChild(divRating);
     }
 }
 
