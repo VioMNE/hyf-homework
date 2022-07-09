@@ -44652,10 +44652,10 @@ console.log(moviesWithKeyWords); // output 17
 
 const duplicatedWordsInTitle = [];
 movies.forEach((movie) => {
-  const moreWordsTitile = movie.title.split(" ");
+  const sameWordsTitile = movie.title.split(" ");
   let duplicate = false;
-  moreWordsTitile.forEach((word) => {
-    if (moreWordsTitile.indexOf(word) != moreWordsTitile.lastIndexOf(word)) {
+  sameWordsTitile.forEach((word) => {
+    if (moreWordsTitile.indexOf(word) != sameWordsTitile.lastIndexOf(word)) {
       duplicate = true;
     }
   });
@@ -44665,5 +44665,3 @@ movies.forEach((movie) => {
 });
 
 console.log(duplicatedWordsInTitle); // output 106
-
-// average rating of all the movies using reduce
