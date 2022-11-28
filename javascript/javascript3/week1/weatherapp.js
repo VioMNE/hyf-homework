@@ -23,20 +23,10 @@ let weather = {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
     const { sunrise, sunset } = data.sys;
-    console.log(
-      name,
-      icon,
-      description,
-      temp,
-      humidity,
-      speed,
-      sunrise,
-      sunset
-    );
     document.querySelector(".city").innerHTML = `Weather in  ${name} `;
     document.querySelector(
       ".icon"
-    ).src = `https://openweathermap.org/img/wn/ ${icon} @2x.png`;
+    ).src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
     document.querySelector(".description").innerHTML = description;
     document.querySelector(".temp").innerHTML = `${Math.round(temp)} °c`;
     document.querySelector(".humidity").innerHTML = `Humidity: ${humidity}%`;
@@ -47,7 +37,7 @@ let weather = {
     document.querySelector(".sunset").innerHTML = `Sunset: ${window
       .moment(sunset * 1000)
       .format("HH:mm a")} `;
-    document.body.style.backgroundImage = ` url('https://source.unsplash.com/1600x900/? ${name} ')`;
+    document.body.style.backgroundImage = ` url('https://source.unsplash.com/1600x900/?${name}')`;
   },
 
   search: function () {

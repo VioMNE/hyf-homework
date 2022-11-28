@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,15 +10,15 @@ body {
 }
 
 main {
-width: 500x;
-margin: 15px auto;
+    width: 500x;
+    margin: 15px auto;
 }
 
 h1 {
-color: rgb(17, 17, 17);
-font-size: 6rem;
-font-family: cursive ;
-margin-bottom: 25px;
+    color: rgb(17, 17, 17);
+    font-size: 6rem;
+    font-family: cursive;
+    margin-bottom: 25px;
 }
 
 input {
@@ -48,5 +48,5 @@ button {
     margin: 15px;
     padding: 100px;
     list-style-type: none;
-    
+
 }

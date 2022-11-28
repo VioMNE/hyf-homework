@@ -56,6 +56,5 @@ const myOwnJson = `{
 	}]
 }`;
 
-    console.log(myOwnJson);
-    console.log(typeof myOwnJson);
-
+console.log(myOwnJson);
+console.log(typeof myOwnJson);
