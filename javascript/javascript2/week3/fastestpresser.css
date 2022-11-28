@@ -4,59 +4,66 @@
 }
 
 body {
-    display:flex; flex-direction:column; justify-content:center;
-    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     width: 70%;
     margin-left: 15%;
-      
+
 
 }
 
-h1{
-    font-style:italic ;
-    font-size:5rem;
-    font-weight:bold;
+h1 {
+    font-style: italic;
+    font-size: 5rem;
+    font-weight: bold;
     text-align: center;
     margin: 1%;
 }
-#container-input{
+
+#container-input {
     text-align: center;
 
 }
-#input-textbox{
-    height :40px;
+
+#input-textbox {
+    height: 40px;
     border-radius: 5px;
     margin-bottom: 1%;
     width: 15%;
     text-align: center;
 }
-#btn{
-    height:50px;
+
+#btn {
+    height: 50px;
     border-radius: 7px;
-    width:8%;
+    width: 8%;
     background-color: grey;
     color: black;
 }
-.game-sections{
+
+.game-sections {
     display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex:1;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
 }
 
-hr.vertical{
+hr.vertical {
     height: 500px;
-    
+
 
 }
-hr.horizontal{
+
+hr.horizontal {
     border-top: 1px solid #ccc;
     margin: 1em 0;
 }
 
 
-h2{
-    font-size:4rem;
+h2 {
+    font-size: 4rem;
     text-align: center;
 
 }
@@ -64,5 +71,5 @@ h2{
 p {
     text-align: center;
     font-size: 2rem;
-    
+
 }
