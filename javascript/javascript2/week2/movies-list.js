@@ -1,5 +1,4 @@
-const getMovies = function () {
-  return [
+const movies = [
     {
       title: "'71",
       year: 2014,
@@ -45527,4 +45526,3 @@ const getMovies = function () {
       running_times: 5580,
     },
   ];
-};
