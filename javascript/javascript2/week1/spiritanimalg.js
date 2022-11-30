@@ -11,15 +11,36 @@ const spiritAnimal = [
   "Optimistic Hawk",
 ];
 
-const inputName = document.getElementById("name");
-const input = document.getElementById("input");
-const randomName = function () {
-  if (inputName === "") {
-    input.innerHTML = "Please enter name here";
-  } else {
-    const randomNumber = Math.floor(Math.random() * spiritAnimal.length);
-    const randomSpiritAnimal = spiritAnimal[randomNumber];
-    input.innerHTML = `${inputName}` + `${randomSpiritAnimal}`;
-  }
+const userInputEL = document.getElementById("user-name");
+const buttonEl = document.getElementById("convert-animal");
+const nameSpaceEl = document.getElementById("animal-name");
+
+buttonEl.addEventListener("click", renderName);
+userInputEL.addEventListener("keydown", renderOnEnter);
+
+function randomNamePicker(spiritAnimals) {
+  const randomName =
+    spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
+  return randomName;
+}
+
+const getName = function () {
+  const userInput = userInputEL.value;
+  return userInput;
 };
-document.getElementById("click").addEventListener("click", randomName);
+
+function renderName() {
+  const userName = getName();
+  if (userName === "") {
+    nameSpaceEl.innerText = `Please enter a name!`;
+  } else {
+    nameSpaceEl.innerText = `${userName} - ${randomNamePicker(spiritAnimal)}`;
+    userInputEL.value = "";
+  }
+}
+
+function renderOnEnter(e) {
+  if (e.key === "Enter") {
+    renderName();
+  }
+}
