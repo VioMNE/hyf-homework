@@ -2,8 +2,8 @@ let userName = "";
 const toDoList = [];
 
 function getReply(command) {
-    if (typeof command !=='string' || command === "") {
-        return `Error! Not a valide command`;
+    if (typeof command !=="string" || command === "") {
+        return `Error! Not a valid command`;
     } if (command === "Hello my name is Violeta" && userName === "") {
         userName = "Violeta";
         return `Nice to meet you ${userName}`;
@@ -14,7 +14,7 @@ function getReply(command) {
         return `Your name is ${userName}`;
    
     }  else if ( command === "What is your name" && userName === "") {
-        return 'Your name is not mentioned';
+        return "Your name is not mentioned";
     }  if (command === "Add fishing to my to do list" ) {
         toDoList.push("fishing");
         return "Fishing added to your to do list";
@@ -26,8 +26,10 @@ function getReply(command) {
         toDoList.splice(indexOftoDolistRemove, 1);
         return "Fishing removed from your to do list";
     }  if (command === "What is on my to do list") {
-        return `There is ${toDoList.length} task left on your list: ${toDoList} `;
-    } if (command === "What day is today?"){
+        return `There is ${toDoList.length} task left on your list: ${toDoList} `; 
+    } if (command === "") {
+        return `There is nothing on your to do list`
+    } if (command === "What day is today?") {
         const today = new Date();
         const months = [
             "Jan",
@@ -47,29 +49,29 @@ function getReply(command) {
     
     }  if (command.includes("what is")) {
 
-        let matches = command.match(/\d+/g);
-        let oprator = command.split(" ");
+        const numbers = command.match(/\d+/g);
+        const operator = command.split(" ");
         let result;
-        if (oprator.includes('*')) {
-            result = parseInt(matches[0]) * parseInt(matches[1]);
+        if (operator.includes("*")) {
+            result = parseInt(numbers[0]) * parseInt(numbers[1]);
             return result;
         }
-        else if (oprator.includes('+')) {
-            result = parseInt(matches[0]) + parseInt(matches[1]);
+        else if (operator.includes("+")) {
+            result = parseInt(numbers[0]) + parseInt(numbers[1]);
             return result;
         }
-        else if (oprator.includes('-')) {
-            result = parseInt(matches[0]) - parseInt(matches[1]);
+        else if (operator.includes("-")) {
+            result = parseInt(numbers[0]) - parseInt(numbers[1]);
             return result;
         }
-        else if (oprator.includes('/')) {
-            result = parseInt(matches[0]) / parseInt(matches[1]);
+        else if (operator.includes("/")) {
+            result = parseInt(numbers[0]) / parseInt(numbers[1]);
             return result;
         }
         
     } if (command.includes("Set a timer for")) {
         let myTimer = command.replace(/\D/g, "");
-        time = myTimer * 60000;
+        let time = myTimer * 60000;
         setTimeout(function () {
             alert("Timer done");
         }, time);
