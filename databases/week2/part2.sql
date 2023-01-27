@@ -11,8 +11,8 @@ SET NAMES utf8mb4;
 CREATE TABLE `Class` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `name` VARCHAR(225) NOT NULL,
-`begins_date` DATETIME NOT NULL,
-`end_date` DATETIME NOT NULL,
+`begins` DATE NOT NULL,
+`end` DATE NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Student: with the columns: id, name, email, phone, class_id (foreign key)

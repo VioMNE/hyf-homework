@@ -33,6 +33,6 @@ WHERE MONTH(created) = 09 AND user.name = 'Maryrose Meadows';
 
 -- 4.Find how many tasks where created in each month
 
-SELECT month(created), COUNT(*)
-FROM task
-GROUP BY month(created);
+SELECT MONTHNAME(created) AS month, COUNT(*) AS number of task 
+FROM task 
+GROUP BY month;
