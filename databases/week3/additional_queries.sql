@@ -64,17 +64,18 @@ INNER JOIN review ON meal.id = review.meal_id
 GROUP BY  review.meal_id;
 
 -- to get average of reviews for all the meals
-SELECT meal_id, avg(stars) 
-FROM review
-GROUP BY meal_id;
+SELECT meal.*, 
+  AVG(review.stars) AS `average_rating` 
+FROM meal 
+JOIN review ON meal.id = review.meal_id 
+GROUP BY meal.id 
+ORDER BY `average_rating` DESC;
 
 -- 7. Get reservations for a specific meal sorted by created_date(reservation created)
-SELECT *
-FROM reservation
-INNER JOIN meal 
-ON reservation.meal_id = meal.id
-WHERE meal.title = 'KYLLING POKÉ'
-ORDER BY meal.created_date ASC;
+SELECT reservation.id =1
+FROM reservation 
+INNER JOIN meal ON meal.id = reservation.meal_id 
+ORDER BY meal.id DESC;
 
 -- 8. Sort all meals by average number of stars in the reviews
 SELECT meal.title, avg(review.stars) AS average 
