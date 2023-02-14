@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const documents = require ("./documents.json");
+const router = express.Router()
+import documents from './documents.json' assert {type: 'json'};
 const port = 3000;
 
 // Support parsing JSON requests
@@ -58,7 +59,7 @@ app.get('/documents/:id', (req, res) => {
       });
       res.send(filterResults);
     } else {
-      res.status(404).json({ error: "Bad request, request body can't be empty" });
+      res.status(404).json({ error: "Request body can't be empty" });
     }
   });
 
@@ -67,4 +68,4 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-
+export default router;
