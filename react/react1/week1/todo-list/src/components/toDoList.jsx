@@ -8,7 +8,7 @@ export default function ToDoList() {
                 {todos.map((todo) => {
                     return (
                         <ToDoItem
-                            key={todos.indexOf(todo) + 1}
+                            todo={todo}
                             description={todo.description}
                             date={todo.date}
                         />
