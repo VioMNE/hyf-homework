@@ -1,4 +1,5 @@
-import { ToDoItem } from "./ToDoItem";
+import ToDoItem from "./ToDoItem";
+
 
 export default function ToDoList(props) {
   if (props.toDoList.length === 0) {
