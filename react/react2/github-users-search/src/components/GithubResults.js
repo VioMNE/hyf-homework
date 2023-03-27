@@ -18,8 +18,8 @@ const GithubResults = () => {
 
   return (
     <ul>
-      {users.map((user) => (
-        <li key={user.id}>{user.login}</li>
+      {users.map(({id, login}) => (
+        <li key={id}>{login}</li>
       ))}
     </ul>
   );
