@@ -35,7 +35,7 @@ CREATE TABLE `review` (
     `description` TEXT NULL DEFAULT NULL,
     `meal_id` INT(10) UNSIGNED NOT NULL,
     `stars` INT(10) UNSIGNED NOT NULL,
-    `created_date` DATE NOT NULL,
+    `created_date` DATE DEFAULT NULL,
     CONSTRAINT `fk_review_meal` FOREIGN KEY (`meal_id`)
         REFERENCES `meal` (`id`)
         ON DELETE CASCADE ON UPDATE CASCADE
